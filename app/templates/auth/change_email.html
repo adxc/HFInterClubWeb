@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}合肥国米{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>修改邮箱</h1>
+</div>
+<div class="col-sm-10">
+    {{ wtf.quick_form(form) }}
+</div>
+{% endblock %}

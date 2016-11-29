@@ -1,0 +1,196 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}合肥国米{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='inter.css') }}">
+{% endblock %}
+{% block body %}
+{% block navbar %}
+<div id="headerWrapper">
+    <div id="headerContent">
+        <div id="socialLinks"></div>
+        <div id="trofei">
+			<a id="trofeo1" class="campionato" href="/en/palmares/1" title="1st SCUDETTO">1st SCUDETTO</a>
+
+			<a id="trofeo2" class="campionato" href="/en/palmares/2" title="2nd SCUDETTO">2nd SCUDETTO</a>
+
+			<a id="trofeo3" class="campionato" href="/en/palmares/3" title="3rd SCUDETTO">3rd SCUDETTO</a>
+
+			<a id="trofeo4" class="campionato" href="/en/palmares/4" title="4th SCUDETTO">4th SCUDETTO</a>
+
+			<a id="trofeo5" class="campionato" href="/en/palmares/5" title="5th SCUDETTO">5th SCUDETTO</a>
+
+			<a id="trofeo6" class="campionato" href="/en/palmares/6" title="6th SCUDETTO">6th SCUDETTO</a>
+
+			<a id="trofeo7" class="campionato" href="/en/palmares/7" title="7th SCUDETTO">7th SCUDETTO</a>
+
+			<a id="trofeo8" class="campionato" href="/en/palmares/8" title="8th SCUDETTO">8th SCUDETTO</a>
+
+			<a id="trofeo9" class="campionato" href="/en/palmares/9" title="9th SCUDETTO">9th SCUDETTO</a>
+
+			<a id="trofeo10" class="campionato" href="/en/palmares/10" title="10th SCUDETTO">10th SCUDETTO</a>
+
+			<a id="trofeo11" class="campionato" href="/en/palmares/11" title="11th SCUDETTO">11th SCUDETTO</a>
+
+			<a id="trofeo12" class="campionato" href="/en/palmares/12" title="12th SCUDETTO">12th SCUDETTO</a>
+
+			<a id="trofeo13" class="campionato" href="/en/palmares/13" title="13th SCUDETTO">13th SCUDETTO</a>
+
+			<a id="trofeo14" class="campionato" href="/en/palmares/28" title="14th SCUDETTO">14th SCUDETTO</a>
+
+			<a id="trofeo15" class="campionato" href="/en/palmares/30" title="15th SCUDETTO">15th SCUDETTO</a>
+
+			<a id="trofeo16" class="campionato" href="/en/palmares/31" title="16th SCUDETTO">16th SCUDETTO</a>
+
+			<a id="trofeo17" class="campionato" href="/en/palmares/33" title="17th SCUDETTO">17th SCUDETTO</a>
+
+			<a id="trofeo18" class="campionato" href="/en/palmares/35" title="18th SCUDETTO">18th SCUDETTO</a>
+
+			<a id="trofeo19" class="coppa-italia" href="/en/palmares/16" title="1st COPPA ITALIA">1st COPPA ITALIA</a>
+
+			<a id="trofeo20" class="coppa-italia" href="/en/palmares/17" title="2nd COPPA ITALIA">2nd COPPA ITALIA</a>
+
+			<a id="trofeo21" class="coppa-italia" href="/en/palmares/18" title="3rd COPPA ITALIA">3rd COPPA ITALIA</a>
+
+			<a id="trofeo22" class="coppa-italia" href="/en/palmares/25" title="4th COPPA ITALIA">4th COPPA ITALIA</a>
+
+			<a id="trofeo23" class="coppa-italia" href="/en/palmares/27" title="5th COPPA ITALIA">5th COPPA ITALIA</a>
+
+			<a id="trofeo24" class="coppa-italia" href="/en/palmares/34" title="6th COPPA ITALIA">6th COPPA ITALIA</a>
+
+			<a id="trofeo25" class="coppa-italia" href="/en/palmares/40" title="7th COPPA ITALIA">7th COPPA ITALIA</a>
+
+			<a id="trofeo26" class="supercoppa" href="/en/palmares/24" title="1st ITALIAN SUPER CUP">1st ITALIAN SUPER CUP</a>
+
+			<a id="trofeo27" class="supercoppa" href="/en/palmares/26" title="2nd ITALIAN SUPERCUP">2nd ITALIAN SUPERCUP</a>
+
+			<a id="trofeo28" class="supercoppa" href="/en/palmares/29" title="3rd ITALIAN SUPERCUP">3rd ITALIAN SUPERCUP</a>
+
+			<a id="trofeo29" class="supercoppa" href="/en/palmares/32" title="4th ITALIAN SUPERCUP">4th ITALIAN SUPERCUP</a>
+
+			<a id="trofeo30" class="supercoppa" href="/en/palmares/37" title="5th Italian Supercup">5th Italian Supercup</a>
+
+			<a id="trofeo31" class="champions-league-old" href="/en/palmares/14" title="1st EUROPEAN CUP">1st EUROPEAN CUP</a>
+
+			<a id="trofeo32" class="champions-league-old" href="/en/palmares/15" title="2nd EUROPEAN CUP">2nd EUROPEAN CUP</a>
+
+			<a id="trofeo33" class="champions-league" href="/en/palmares/36" title="THIRD CHAMPIONS LEAGUE">THIRD CHAMPIONS LEAGUE</a>
+
+			<a id="trofeo34" class="coppa-uefa" href="/en/palmares/19" title="1st UEFA CUP">1st UEFA CUP</a>
+
+			<a id="trofeo35" class="coppa-uefa" href="/en/palmares/20" title="2nd UEFA CUP">2nd UEFA CUP</a>
+
+			<a id="trofeo36" class="coppa-uefa" href="/en/palmares/21" title="3rd UEFA CUP">3rd UEFA CUP</a>
+
+			<a id="trofeo37" class="coppa-intercontinentale" href="/en/palmares/22" title="1st INTERCONTINENTAL CUP">1st INTERCONTINENTAL CUP</a>
+
+			<a id="trofeo38" class="coppa-intercontinentale" href="/en/palmares/23" title="2nd INTERCONTINENTAL CUP">2nd INTERCONTINENTAL CUP</a>
+
+			<a id="trofeo39" class="mondiale-per-club" href="/en/palmares/38" title="1st FIFA Club World Cup">1st FIFA Club World Cup</a>
+
+		</div>
+		<div id="mainMenu">
+			<ul>
+        		<li >
+            		<a class= 'subMenu' role="menuitem" tabindex="-1" href="{{ url_for('main.index') }}">主页</a>
+        		</li>
+        		<li >
+            		<a class= 'subMenu' role="menuitem" tabindex="-1" href="{{ url_for('main.team') }}">球队介绍</a>
+        		</li>
+        		<li >
+            		<a class= 'subMenu' role="menuitem" tabindex="-1" href="{{ url_for('main.player') }}">球员资料</a>
+        		</li>
+        		<li >
+            		<a class= 'subMenu' role="menuitem" tabindex="-1" href="{{ url_for('main.news') }}">球队新闻</a>
+				</li>
+				<li >
+					<a class= 'subMenu' role="menuitem" tabindex="-1" href="{{ url_for('main.match') }}">球队比赛</a>
+				</li>
+				{% if current_user.can(Permission.MODERATE_COMMENTS) %}
+				<li><a href="{{ url_for('main.moderate')}}">管理评论</a> </li>
+				{% endif %}
+				{% if current_user.is_authenticated %}
+				{% block dropdown %}
+                	<li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ current_user.username}}
+            		<span class="caret"></span></a>
+       				 <ul class="dropdown-menu" style="background-color: #0F1A25">
+            			 <li>
+                            <a role="menuitem" tabindex="-1" href="{{ url_for('main.edit_profile') }}">个人资料</a>
+                         </li>
+                         <li>
+                             <a role="menuitem" tabindex="-1" href="{{ url_for('auth.change_password') }}">修改密码</a>
+                         <li>
+                         <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url_for('auth.logout') }}">退出</a>
+						</li>
+     			   </ul>
+                </li>
+				{% endblock %}
+				{% else %}
+				<li><a class= 'subMenu' role="menuitem" href="{{ url_for('auth.login') }}">登陆</a></li>
+				{% endif %}
+			</ul>
+</div>
+    <div id="logo">
+	<a href="/en/hp" title="F.C. Internazionale">F.C. Internazionale</a>
+    </div>
+		</div>
+	</div>
+{% endblock %}
+{% block content %}
+{% block page_content %}{% endblock %}
+{% endblock %}
+{% block footer %}
+<div id="footerWrapper">
+    <div id="footerContent">
+        <div id="sponsors">
+	        <a id="nike" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=12" title="Nike" target="_blank">Nike</a>
+	        <a id="pirelli" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=11" title="Pirelli" target="_blank">Pirelli</a>
+	        <a id="tim" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=36" title="TIM" target="_blank">TIM</a>
+            <a id="deutschebank" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=506" title="Deutschebank">Deutschebank</a>
+        </div>
+        <div id="footerMenu">
+            <ul>
+                <li>
+                    <p>关于我们</p>
+                    <ul>
+                        <li><a>球队介绍</a></li>
+                        <li><a>球员资料</a></li>
+                        <li><a>球队新闻</a></li>
+                        <li><a>比赛信息</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>国米阵营</p>
+                    <ul>
+                         <li><a>国际米兰</a></li>
+                         <li><a>南京国米十字军</a></li>
+                         <li><a>北京国米阵线</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>联系方式</p>
+                    <ul>
+                        <li><a>QQ群:4515495</a></li>
+                        <li><a href="http://tieba.baidu.com/f?kw=大合肥小国际">百度贴吧：大合肥小国际</a></li>
+                        <li><a href="http://www.weibo.com/u/3918039932?topnav=1&wvr=6&topsug=1&is_all=1">微博：大合肥小国际球迷队</a></li>
+                    </ul>
+                </li>
+                <li><p>技术支持</p>
+                    <ul>
+                        <li><a>奚漂亮</a></li>
+                        <li><a>奚漂亮</a></li>
+                        <li><a>奚漂亮</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
+{% endblock %}

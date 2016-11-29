@@ -1,0 +1,51 @@
+{% extends "player.html" %}
+{% block content%}
+<div class="container">
+    <div id="myCarousel" class="carousel slide">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+	</ol>
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<img class="img-responsive imgsize"  src="../static/P1090763.JPG" alt="First slide">
+		</div>
+		<div class="item">
+			<img class="img-responsive imgsize"  src="../static/P1090766.JPG" alt="Second slide">
+		</div>
+		<div class="item">
+			<img class="img-responsive imgsize"  src="../static/P1090770.JPG" alt="Third slide">
+		</div>
+        <div class="item">
+			<img  class="img-responsive imgsize"  src="../static/IMG_1560.JPG" alt="Fourth slide">
+		</div>
+        <div class="item">
+			<img class="img-responsive imgsize"   src="../static/IMG_2318.JPG" alt="Fifth slide">
+		</div>
+        <div class="item">
+			<img class="img-responsive imgsize"  src="../static/20160904.jpg" alt="Sixth slide">
+		</div>
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+     {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+{% endblock %}

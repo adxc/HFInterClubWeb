@@ -1,0 +1,13 @@
+Dear {{ user.username }},
+
+Welcome to 合肥国米!
+
+To confirm your account please click on the following link:
+
+{{ url_for('auth.confirm', token=token, _external=True) }}
+
+Sincerely,
+
+合肥国米管理组
+
+Note: replies to this email address are not monitored.

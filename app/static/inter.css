@@ -1,0 +1,729 @@
+#headerWrapper {
+  width: 100%;
+  min-width: 968px;
+  overflow: inherit;
+  background: url('bg-header-wrapper.jpg') repeat-x left top;
+  z-index: 998;
+}
+#headerWrapper #headerContent {
+  width: 968px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  overflow: visible;
+  background: url('bg-header-content2014.jpg') no-repeat left top;
+  min-height: 165px;
+  *zoom: 1;
+}
+#headerWrapper #headerContent:before,
+#headerWrapper #headerContent:after {
+  content: "";
+  display: table;
+}
+#headerWrapper #headerContent:after {
+  clear: both;
+}
+#headerWrapper #headerContent #externalLinks {
+  display: inline;
+  float: left;
+  width: 268px;
+
+}
+#headerWrapper #headerContent #externalLinks ul {
+  float: left;
+  list-style: none;
+  padding-left: 10px;
+  margin: 0;
+}
+#headerWrapper #headerContent #externalLinks ul li, #externalbrandname {
+  float: left;
+  color:#666;
+  margin-top:4px;
+  z-index:9999 !important;
+
+}
+
+#externalbrandname {
+  float: left;
+  font-family: 'LeagueGothicRegular';
+  font-weight: normal;
+  font-size: 19px;
+  margin-bottom:5px;
+  border-left:5px solid;
+  border-left-color:rgb(228,222,206);
+
+  margin-right:100px;
+  text-align:right;
+  color:#666;
+  z-index:9999 !important;
+
+}
+#externalbrandname li {
+   text-align:right;
+
+}
+
+#headerWrapper #headerContent #externalLinks ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color:#333;
+
+}
+#headerWrapper #headerContent #externalLinks ul li a:hover {
+  text-decoration: none;
+  color:#fff;
+}
+#headerWrapper #headerContent #externalLinks #printlogo {
+  display:none;
+}
+#headerWrapper #headerContent #socialLinks,.socialLinks {
+	display: inline;
+	float: left;
+	width: 530px;
+	height: 29px;
+	overflow:hidden;
+	margin-right: 1px;
+	margin-bottom: 0;
+	margin-left: 0;
+
+}
+.socialLinks {
+	width: 30% !important;
+	height: 29px;
+	overflow:hidden;
+	margin-bottom: 20px;
+	margin-left: 35% !important;
+	margin-top:-10px;
+}
+#headerWrapper #headerContent #socialLinks ul,.socialLinks ul {
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.socialLinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float:none !important;
+}
+#headerWrapper #headerContent #socialLinks ul li,.socialLinks ul li {
+  float: left;
+  font-size: 1.5384615384615385em;
+  line-height: 1.45em;
+  color: #a59061;
+}
+#headerWrapper #headerContent #socialLinks ul li a,.socialLinks ul li a {
+  display: block;
+}
+#headerWrapper #headerContent #socialLinks ul li#facebookLink,
+#headerWrapper #headerContent #socialLinks ul li#twitterLink,
+#headerWrapper #headerContent #socialLinks ul li#youtubeLink,
+#headerWrapper #headerContent #socialLinks ul li#googlepLink,
+#headerWrapper #headerContent #socialLinks ul li#instagramLink,
+#headerWrapper #headerContent #socialLinks ul li#weiboLink
+#headerWrapper #headerContent #socialLinks ul li#LinkedinLink
+{
+  padding-top: 0px;
+}
+#headerWrapper #headerContent #socialLinks ul li#facebookLink a,
+#headerWrapper #headerContent #socialLinks ul li#twitterLink a,
+#headerWrapper #headerContent #socialLinks ul li#youtubeLink a,
+#headerWrapper #headerContent #socialLinks ul li#googlepLink a,
+#headerWrapper #headerContent #socialLinks ul li#instagramLink a,
+#headerWrapper #headerContent #socialLinks ul li#weiboLink a
+#headerWrapper #headerContent #socialLinks ul li#LinkedinLink a
+ {
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#headerWrapper #headerContent #socialLinks ul li#facebookLink a,.socialLinks ul li#facebookLink a {
+  width: 29px;
+  margin-right: 0px;
+  background: url('fb_on.png')  no-repeat left top;
+}
+#headerWrapper #headerContent #socialLinks ul li#facebookLink a:hover,.socialLinks ul li#facebookLink a:hover {
+  background: url('fb_off.png') no-repeat left top;
+}
+
+
+#headerWrapper #headerContent #socialLinks ul li#LinkedinLink a,.socialLinks ul li#LinkedinLink a {
+  width: 29px;
+  margin-right: 0px;
+  background: url('linkedin_on.jpg')  no-repeat left top;
+}
+#headerWrapper #headerContent #socialLinks ul li#LinkedinLink a:hover,.socialLinks ul li#LinkedinLink a:hover {
+  background: url('linkedin_off.jpg') no-repeat left top;
+}
+
+
+#headerWrapper #headerContent #socialLinks ul li#twitterLink a,.socialLinks ul li#twitterLink a {
+  width: 29px;
+  margin-right: 0px;
+  background: url('tw_on.png')  no-repeat left top;
+}
+#headerWrapper #headerContent #socialLinks ul li#twitterLink a:hover,.socialLinks ul li#twitterLink a:hover {
+  background: url('tw_off.png') no-repeat left top;
+}
+
+
+#headerWrapper #headerContent #socialLinks ul li#youtubeLink a,.socialLinks ul li#youtubeLink a {
+  width: 29px;
+  margin-right: 0px;
+  background: url('yt_on.png')  no-repeat left top;
+}
+#headerWrapper #headerContent #socialLinks ul li#youtubeLink a:hover {
+  background: url('yt_off.png') no-repeat left top;
+}
+
+
+#headerWrapper #headerContent #socialLinks ul li#instagramLink a,.socialLinks ul li#instagramLink a {
+  width: 29px;
+  margin-right: 0px;
+  background: url('icona_ig_v2_29x29.png')  no-repeat left top;
+}
+#headerWrapper #headerContent #socialLinks ul li#instagramLink a:hover,.socialLinks ul li#instagramLink a:hover {
+  background: url('icona_ig_v2_29x29_hover.png') no-repeat left top;
+}
+
+#headerWrapper #headerContent #socialLinks ul li#googlepLink a,.socialLinks ul li#googlepLink a {
+  width: 29px;
+  margin-right: 0px;
+  background: url('googleplus_new.png')  no-repeat left top;
+}
+#headerWrapper #headerContent #socialLinks ul li#googlepLink a:hover,.socialLinks ul li#googlepLink a:hover {
+  background: url('googleplus_new.png') no-repeat left top;
+}
+
+#headerWrapper #headerContent #socialLinks ul li#weiboLink a,.socialLinks ul li#weiboLink a {
+  width: 29px;
+  margin-right: 0px;
+  background: url('wb_on.png')  no-repeat left top;
+}
+#headerWrapper #headerContent #socialLinks ul li#weiboLink a:hover,.socialLinks ul li#weiboLink a:hover {
+  background: url('wb_off.png') no-repeat left top;
+}
+.socialLinks ul li{width:20%;}
+.socialLinks ul li a
+ {
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right:2% !important;
+  width:98% !important;
+}
+
+#headerWrapper #headerContent #socialLinks ul li#searchBox {
+  width: 34px;
+  height: 29px;
+  font-size: 0.9230769230769231em;
+  line-height: 2.4166666666666665em;
+  color: #000000;
+  border-left: 1px solid #a59061;
+  overflow: hidden;
+}
+#headerWrapper #headerContent #socialLinks ul li#searchBox #headerSearch p {
+  display: none;
+  position: relative;
+  float: left;
+  padding: 0 0 0 5px;
+  margin: 0;
+}
+#headerWrapper #headerContent #socialLinks ul li#searchBox #headerSearch p label {
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+#headerWrapper #headerContent #socialLinks ul li#searchBox #headerSearch p #headerSearchQuery {
+  width: 150px;
+  background: #ffffff;
+  border: 1px solid #a59061;
+  outline: none;
+}
+#headerWrapper #headerContent #socialLinks ul li#searchBox #headerSearch #headerSearchButton {
+  display: block;
+  float: right;
+  width: 34px;
+  height: 29px;
+  background: url('search.png') no-repeat left top;
+  border: none;
+}
+#headerWrapper #headerContent #socialLinks ul li#searchBox a {
+  width: 34px;
+  height: 29px;
+  background: url('search.png') no-repeat left top;
+  text-indent: 100%;
+  white-space: nowrap;
+
+}
+#headerWrapper #headerContent #socialLinks ul li#subscribeLink,
+#headerWrapper #headerContent #socialLinks ul li#loginLink {
+  letter-spacing: 1px;
+}
+#headerWrapper #headerContent #socialLinks ul li#subscribeLink a,
+#headerWrapper #headerContent #socialLinks ul li#loginLink a {
+	font-family: 'LeagueGothicRegular';
+	font-weight: normal;
+	font-style: normal;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #a59061;
+	height:28px;
+	padding-top: 2px;
+	padding-right: 8px;
+	padding-bottom: 0;
+	padding-left: 8px;
+	overflow:hidden
+}
+#headerWrapper #headerContent #socialLinks ul li#loginLink {
+  border-left: 1px solid #e1dccd;
+}
+#headerWrapper #headerContent #socialLinks ul li#loginLink a:hover,
+#headerWrapper #headerContent #socialLinks ul li#loginLink a.active {
+  background-color: #005daa;
+}
+#headerWrapper #headerContent #socialLinks ul li#loginLink.loggedin {
+  font-size: 1em;
+  line-height: 2.230769230769231em;
+  letter-spacing: 0;
+}
+/*#headerWrapper #headerContent #socialLinks ul li#loginLink.loggedin a {*/
+  /*font-family: sans-serif;*/
+  /*text-transform: none;*/
+  /*padding-right: 23px;*/
+  /*background: #a59061 url('bg-link-profilo.png') no-repeat right 11px;*/
+/*}*/
+/*#headerWrapper #headerContent #socialLinks ul li#loginLink.loggedin a:hover,*/
+/*#headerWrapper #headerContent #socialLinks ul li#loginLink.loggedin a.active {*/
+  /*background: #005daa url('bg-link-profilo.png') no-repeat right 11px;*/
+/*}*/
+#headerWrapper #headerContent #trofei {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 967px;
+  margin: 0 1px 0 0;
+  height: 97px;
+}
+#headerWrapper #headerContent #trofei a {
+  position: absolute;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#headerWrapper #headerContent #trofei a.campionato {
+  top: 38px;
+  width: 13px;
+  height: 12px;
+  background-image: url('campionato.png');
+}
+#headerWrapper #headerContent #trofei a.campionato:hover {
+  background-image: url('campionato-over.png');
+}
+#headerWrapper #headerContent #trofei a.coppa-italia {
+  top: 62px;
+  width: 11px;
+  height: 29px;
+  background-image: url('coppa-italia.png');
+}
+#headerWrapper #headerContent #trofei a.coppa-italia:hover {
+  background-image: url('coppa-italia-over.png');
+}
+#headerWrapper #headerContent #trofei a.champions-league {
+  top: 63px;
+  width: 17px;
+  height: 28px;
+  background-image: url('champions-league.png');
+}
+#headerWrapper #headerContent #trofei a.champions-league:hover {
+  background-image: url('champions-league-over.png');
+}
+#headerWrapper #headerContent #trofei a.champions-league-old {
+  top: 66px;
+  width: 15px;
+  height: 25px;
+  background-image: url('champions-league-old.png');
+}
+#headerWrapper #headerContent #trofei a.champions-league-old:hover {
+  background-image: url('champions-league-old-over.png');
+}
+#headerWrapper #headerContent #trofei a.coppa-intercontinentale {
+  top: 63px;
+  width: 10px;
+  height: 28px;
+  background-image: url('coppa-intercontinentale.png');
+}
+#headerWrapper #headerContent #trofei a.coppa-intercontinentale:hover {
+  background-image: url('coppa-intercontinentale-over.png');
+}
+#headerWrapper #headerContent #trofei a.coppa-uefa {
+  top: 65px;
+  width: 12px;
+  height: 26px;
+  background-image: url('coppa-uefa.png');
+}
+#headerWrapper #headerContent #trofei a.coppa-uefa:hover {
+  background-image: url('coppa-uefa-over.png');
+}
+#headerWrapper #headerContent #trofei a.mondiale-per-club {
+  top: 59px;
+  width: 12px;
+  height: 32px;
+  background-image: url('mondiale-per-club.png');
+}
+#headerWrapper #headerContent #trofei a.mondiale-per-club:hover {
+  background-image: url('mondiale-per-club-over.png');
+}
+#headerWrapper #headerContent #trofei a.supercoppa {
+  top: 61px;
+  width: 12px;
+  height: 30px;
+  background-image: url('supercoppa.png');
+}
+#headerWrapper #headerContent #trofei a.supercoppa:hover {
+  background-image: url('supercoppa-over.png');
+}
+#headerWrapper #headerContent #trofei a#trofeo1 {
+  left: 37px;
+}
+#headerWrapper #headerContent #trofei a#trofeo2 {
+  left: 81px;
+}
+#headerWrapper #headerContent #trofei a#trofeo3 {
+  left: 124px;
+}
+#headerWrapper #headerContent #trofei a#trofeo4 {
+  left: 167px;
+}
+#headerWrapper #headerContent #trofei a#trofeo5 {
+  left: 210px;
+}
+#headerWrapper #headerContent #trofei a#trofeo6 {
+  left: 253px;
+}
+#headerWrapper #headerContent #trofei a#trofeo7 {
+  left: 296px;
+}
+#headerWrapper #headerContent #trofei a#trofeo8 {
+  left: 339px;
+}
+#headerWrapper #headerContent #trofei a#trofeo9 {
+  left: 382px;
+}
+#headerWrapper #headerContent #trofei a#trofeo10 {
+  left: 568px;
+}
+#headerWrapper #headerContent #trofei a#trofeo11 {
+  left: 610px;
+}
+#headerWrapper #headerContent #trofei a#trofeo12 {
+  left: 653px;
+}
+#headerWrapper #headerContent #trofei a#trofeo13 {
+  left: 696px;
+}
+#headerWrapper #headerContent #trofei a#trofeo14 {
+  left: 739px;
+}
+#headerWrapper #headerContent #trofei a#trofeo15 {
+  left: 782px;
+}
+#headerWrapper #headerContent #trofei a#trofeo16 {
+  left: 825px;
+}
+#headerWrapper #headerContent #trofei a#trofeo17 {
+  left: 868px;
+}
+#headerWrapper #headerContent #trofei a#trofeo18 {
+  left: 910px;
+}
+#headerWrapper #headerContent #trofei a#trofeo19 {
+  left: 19px;
+}
+#headerWrapper #headerContent #trofei a#trofeo20 {
+  left: 57px;
+}
+#headerWrapper #headerContent #trofei a#trofeo21 {
+  left: 96px;
+}
+#headerWrapper #headerContent #trofei a#trofeo22 {
+  left: 134px;
+}
+#headerWrapper #headerContent #trofei a#trofeo23 {
+  left: 172px;
+}
+#headerWrapper #headerContent #trofei a#trofeo24 {
+  left: 211px;
+}
+#headerWrapper #headerContent #trofei a#trofeo25 {
+  left: 249px;
+}
+#headerWrapper #headerContent #trofei a#trofeo26 {
+  left: 287px;
+}
+#headerWrapper #headerContent #trofei a#trofeo27 {
+  left: 325px;
+}
+#headerWrapper #headerContent #trofei a#trofeo28 {
+  left: 364px;
+}
+#headerWrapper #headerContent #trofei a#trofeo29 {
+  left: 402px;
+}
+#headerWrapper #headerContent #trofei a#trofeo30 {
+  left: 548px;
+}
+#headerWrapper #headerContent #trofei a#trofeo31 {
+  left: 590px;
+}
+#headerWrapper #headerContent #trofei a#trofeo32 {
+  left: 633px;
+}
+#headerWrapper #headerContent #trofei a#trofeo33 {
+  left: 675px;
+}
+#headerWrapper #headerContent #trofei a#trofeo34 {
+  left: 720px;
+}
+#headerWrapper #headerContent #trofei a#trofeo35 {
+  left: 763px;
+}
+#headerWrapper #headerContent #trofei a#trofeo36 {
+  left: 806px;
+}
+#headerWrapper #headerContent #trofei a#trofeo37 {
+  left: 850px;
+}
+#headerWrapper #headerContent #trofei a#trofeo38 {
+  left: 893px;
+}
+#headerWrapper #headerContent #trofei a#trofeo39 {
+  left: 935px;
+}
+
+#headerWrapper #headerContent #logo {
+  position: absolute;
+  top: 8px;
+  left: 430px;
+  width: 105px;
+  height: 133px;
+}
+#headerWrapper #headerContent #logo a {
+  display: block;
+  width: 105px;
+  height: 133px;
+  background: url('fc-internazionale2016.png') no-repeat left top;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#headerWrapper #headerContent #mainMenu {
+	display: inline;
+	float: left;
+	width: 967px;
+	padding-left:0px;
+
+}
+#headerWrapper #headerContent #mainMenu ul {
+  float: left;
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  border-left: 1px solid #a59061;
+}
+#headerWrapper #headerContent #mainMenu ul li {
+  float: left;
+  height: 29px;
+  font-size: 1.5em;
+  line-height: 1em;
+  text-align: center;
+  letter-spacing: 5px;
+}
+#headerWrapper #headerContent #mainMenu ul li a {
+  display: block;
+  width: 161px;
+  height: 29px;
+  font-family: 'LeagueGothicRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-right: 1px solid #a59061;
+}
+#headerWrapper #headerContent #mainMenu ul li a:hover,
+#headerWrapper #headerContent #mainMenu ul li a.current,
+#headerWrapper #headerContent #mainMenu ul li a.open {
+  background-color: #192b3c;
+  color: #005daa;
+}
+#headerWrapper #headerContent #mainMenu ul li a#menuShop {
+  border: none;
+  color: #a59061;
+}
+#headerWrapper #headerContent #mainMenu ul li a#menuShop:hover,
+#headerWrapper #headerContent #mainMenu ul li a#menuShop.current {
+  color: #005daa;
+}
+
+#footerWrapper {
+  width: 100%;
+  min-width: 968px;
+  overflow: hidden;
+  background: url('bg-footer-wrapper.png') repeat-x left top;
+}
+#footerWrapper #footerContent {
+  width: 968px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 400px;
+  background: url('bg-footer-content.png') repeat-x left top;
+}
+#footerWrapper #footerContent #copy,
+#footerWrapper #footerContent #privacy {
+  display: inline;
+  float: left;
+  width: 483px;
+  margin: 0 1px 0 0;
+}
+#footerWrapper #footerContent #copy p,
+#footerWrapper #footerContent #privacy p {
+  font-size: 0.9230769230769231em;
+  line-height: 2.5833333333333335em;
+  margin: 0 10px;
+}
+#footerWrapper #footerContent #privacy p {
+  color: #a59061;
+  text-align: right;
+}
+#footerWrapper #footerContent #privacy p a {
+  color: #a59061;
+  text-decoration: none;
+}
+#footerWrapper #footerContent #privacy p a:hover {
+  text-decoration: underline;
+}
+#footerWrapper #footerContent #sponsors {
+  position: relative;
+  display: inline !important;
+  float: left;
+  width: 967px;
+  margin: 0 1px 0 0;
+  height: 205px;
+  overflow:auto;
+}
+#footerWrapper #footerContent #sponsors a {
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  text-indent:-9999px;
+  overflow: hidden;
+}
+#footerWrapper #footerContent #sponsors a#nike {
+  top: 60px;
+  left: 364px;
+  width: 100px;
+  height: 35px;
+  background: url('nike.png') no-repeat;
+}
+#footerWrapper #footerContent #sponsors a#nike:hover {
+  background: url('nike_over.png') no-repeat;
+}
+#footerWrapper #footerContent #sponsors a#pirelli {
+  top: 60px;
+  left: 495px;
+  width: 120px;
+  height: 37px;
+  background: url('pirelli.png') no-repeat;
+}
+#footerWrapper #footerContent #sponsors a#pirelli:hover {
+  background: url('pirelli_over.png') no-repeat;
+}
+#footerWrapper #footerContent #sponsors a#tim {
+  top: 135px;
+  left: 359px;
+  width: 100px;
+  height: 55px;
+  background: url('tim016.png') no-repeat;
+}
+#footerWrapper #footerContent #sponsors a#tim:hover {
+  background: url('tim016_over.png') no-repeat;
+}
+
+#footerWrapper #footerContent #sponsors a#oknoplast {
+  display:none;
+  /*top: 110px;
+  left: 429px;
+  width: 100px;
+  height: 53px;
+  background: url(/html/images/sponsors/oknoplast4_off.png) no-repeat;*/
+}
+#footerWrapper #footerContent #sponsors a#oknoplast:hover {
+  display:none;
+  /*
+  background: url(/html/images/sponsors/oknoplast4_on.png) no-repeat;*/
+
+}
+
+#footerWrapper #footerContent #sponsors a#deutschebank {
+  top: 138px;
+  left: 508px;
+  width: 100px;
+  height: 51px;
+  background: url('deutschebank.png') no-repeat;
+}
+#footerWrapper #footerContent #sponsors a#deutschebank:hover {
+  background: url('deutschebank_over.png') no-repeat;
+}
+#footerWrapper #footerContent #footerMenu {
+  display: inline;
+  float: left;
+  width: 967px;
+  margin: 0 1px 0 0;
+}
+#footerWrapper #footerContent #footerMenu ul {
+  list-style: none;
+  margin: 15px 0 0 15px;
+  padding: 0;
+}
+#footerWrapper #footerContent #footerMenu ul li {
+  float: left;
+  width: 200px;
+}
+#footerWrapper #footerContent #footerMenu ul li p {
+  font-family: 'LeagueGothicRegular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6em;
+  line-height: 2.5em;
+  margin-bottom: 0.22727272727272727em;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+#footerWrapper #footerContent #footerMenu ul li p a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#footerWrapper #footerContent #footerMenu ul li p a:hover {
+  color: #005daa;
+}
+#footerWrapper #footerContent #footerMenu ul li ul {
+  margin: 0 0 16px;
+}
+#footerWrapper #footerContent #footerMenu ul li ul li {
+  float: none;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+#footerWrapper #footerContent #footerMenu ul li ul li a {
+  color: #e1dccd;
+  text-decoration: none;
+}
+#footerWrapper #footerContent #footerMenu ul li ul li a:hover {
+  color: #ffffff;
+}
