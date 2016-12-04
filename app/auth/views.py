@@ -1,6 +1,6 @@
 from flask import render_template, redirect, request, url_for, flash
 from . import auth
-from flask.ext.login import login_user, login_required, logout_user, current_user
+from flask_login import login_user, login_required, logout_user, current_user
 from ..models import User
 from .forms import LoginForm, RegistrationForm, ChangePasswordForm, ChangeEmailForm, ResetPasswordForm, \
     PasswordResetRequestForm, ChangeUsernameForm

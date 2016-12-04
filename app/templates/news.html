@@ -3,16 +3,13 @@
 {% import "_macros.html" as macros %}
 {% block title %}合肥国米{% endblock %}
 {% block page_content %}
-<div>
+{% include '_posts.html' %}
+<div class="content hfstyle">
     {% if current_user.can(Permission.WRITE_ARTICLES) %}
     {{ wtf.quick_form(form) }}
     {% endif %}
 </div>
-{% include '_posts.html' %}
 {% if pagination %}
-<div class="pagination">
-    {{ macros.pagination_widget(pagination, '.index') }}
-</div>
 {% endif %}
 {% endblock %}
 {% block scripts %}

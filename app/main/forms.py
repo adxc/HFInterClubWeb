@@ -1,8 +1,8 @@
-from flask.ext.wtf import Form
+from flask_wtf import Form
 from wtforms import StringField, SubmitField, BooleanField, SelectField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError
 from ..models import Role, User
-from flask.ext.pagedown.fields import PageDownField
+from flask_pagedown.fields import PageDownField
 
 
 # 个人资料表格

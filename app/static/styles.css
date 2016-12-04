@@ -1,5 +1,9 @@
 .profile-thumbnail {
     position: absolute;
+    left: 2px;
+    width: 82px;
+    height: 82px;
+
 }
 .profile-header {
     min-height: 260px;
@@ -9,10 +13,13 @@ div.post-tabs {
     margin-top: 16px;
 }
 ul.posts {
-    list-style-type: none;
-    padding: 0px;
-    margin: 16px 0px 0px 0px;
-    border-top: 1px solid #e0e0e0;
+    position: relative;
+    list-style-type:none;
+    left: 156px;
+    width: 75.5%;
+    border:0px;
+    margin:0px;
+    background-color: #f0f0f0;
 }
 div.post-tabs ul.posts {
     margin: 0px;
@@ -22,9 +29,9 @@ ul.posts li.post {
     padding: 8px;
     border-bottom: 1px solid #e0e0e0;
 }
-ul.posts li.post:hover {
-    background-color: #f0f0f0;
-}
+/*ul.posts li.post:hover {*/
+    /*background-color: #f0f0f0;*/
+/*}*/
 div.post-date {
     float: right;
 }
@@ -47,16 +54,18 @@ ul.comments {
     margin: 16px 0px 0px 0px;
 }
 ul.comments li.comment {
-    margin-left: 32px;
+    margin-left: 156px;
+    width: 75.5%;
     padding: 8px;
     border-bottom: 1px solid #e0e0e0;
+    background-color: #f0f0f0
 }
 ul.comments li.comment:nth-child(1) {
     border-top: 1px solid #e0e0e0;
 }
-ul.comments li.comment:hover {
-    background-color: #f0f0f0;
-}
+/*ul.comments li.comment:hover {*/
+    /*background-color: #f0f0f0;*/
+/*}*/
 div.comment-date {
     float: right;
 }
@@ -66,8 +75,15 @@ div.comment-author {
 div.comment-thumbnail {
     position: absolute;
 }
+div.comment-thumbnail a img{
+    position: relative;
+    top: -6px;
+    right: 6px;
+    width: 62px;
+    height: 62px;
+}
 div.comment-content {
-    margin-left: 48px;
+    margin-left: 68px;
     min-height: 48px;
 }
 div.comment-form {
@@ -113,8 +129,8 @@ div.flask-pagedown-preview h3 {
 }
 .content{
     position: relative;
-    left: 160px;
-    width: 75%;
+    left: 156px;
+    width: 75.5%;
     border:0px;
     margin:0px;
 
@@ -134,4 +150,17 @@ div.flask-pagedown-preview h3 {
 .col-md-offset-2 h1 {
     color: #e0e0e0;
 }
-body{background-color: #0F1A25}
+body{
+    background-color: #0F1A25;
+}
+.hfmatch{
+    background-color: white;
+}
+.hfmatch p{
+    font-size: 30px;
+    text-align: center;
+}
+.hfstyle {
+    font-size: 20px;
+    color: #e0e0e0;
+}

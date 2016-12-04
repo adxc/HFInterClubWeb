@@ -10,8 +10,8 @@ class Config:
     MAIL_SERVER = 'smtp.163.com'
     MAIL_PORT = 465
     MAIL_USE_SSL = True
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or 'andyxic@163.com'
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or 'XIchen520'
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME') 
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <andyxic@163.com>'
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN') or '181551588@qq.com'
