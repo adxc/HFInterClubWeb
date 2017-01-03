@@ -107,12 +107,9 @@
 				<li >
 					<a class= 'subMenu' role="menuitem" tabindex="-1" href="{{ url_for('main.match') }}">球队比赛</a>
 				</li>
-				{% if current_user.can(Permission.MODERATE_COMMENTS) %}
-				<li><a href="{{ url_for('main.moderate')}}">管理评论</a> </li>
-				{% endif %}
 				{% if current_user.is_authenticated %}
 				{% block dropdown %}
-                	<li class="dropdown">
+				<li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ current_user.username}}
             		<span class="caret"></span></a>
        				 <ul class="dropdown-menu" style="background-color: #0F1A25">
@@ -121,8 +118,12 @@
                          </li>
                          <li>
                              <a role="menuitem" tabindex="-1" href="{{ url_for('auth.change_password') }}">修改密码</a>
-                         <li>
-                         <li role="presentation" class="divider"></li>
+                         </li>
+						 {% if current_user.is_administrator() %}
+						 <li>
+                             <a role="menuitem" tabindex="-1" href="{{ url_for('main.admin') }}">后台管理</a>
+                         </li>
+						 {% endif %}
                          <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url_for('auth.logout') }}">退出</a>
 						</li>
      			   </ul>
@@ -134,7 +135,7 @@
 			</ul>
 </div>
     <div id="logo">
-	<a href="/en/hp" title="F.C. Internazionale">F.C. Internazionale</a>
+	<a href="{{ url_for('main.index') }}" title="F.C. Internazionale">F.C. Internazionale</a>
     </div>
 		</div>
 	</div>
@@ -146,7 +147,7 @@
 <div id="footerWrapper">
     <div id="footerContent">
         <div id="sponsors">
-	        <a id="nike" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=12" title="Nike" target="_blank">Nike</a>
+	        <a id="nike" href="http://www.nike.com/cn/zh_cn/" title="Nike" target="_blank">Nike</a>
 	        <a id="pirelli" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=11" title="Pirelli" target="_blank">Pirelli</a>
 	        <a id="tim" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=36" title="TIM" target="_blank">TIM</a>
             <a id="deutschebank" href="http://b2b.inter.it/open/b2blinktrack.php?W=1&ID=506" title="Deutschebank">Deutschebank</a>
@@ -156,18 +157,18 @@
                 <li>
                     <p>关于我们</p>
                     <ul>
-                        <li><a>球队介绍</a></li>
-                        <li><a>球员资料</a></li>
-                        <li><a>球队新闻</a></li>
-                        <li><a>比赛信息</a></li>
+                        <li><a href="{{ url_for('main.team') }}">球队介绍</a></li>
+                        <li><a href="{{ url_for('main.player') }}">球员资料</a></li>
+                        <li><a href="{{ url_for('main.news') }}">球队新闻</a></li>
+                        <li><a href="{{ url_for('main.match') }}">比赛信息</a></li>
                     </ul>
                 </li>
                 <li>
                     <p>国米阵营</p>
                     <ul>
-                         <li><a>国际米兰</a></li>
-                         <li><a>南京国米十字军</a></li>
-                         <li><a>北京国米阵线</a></li>
+                         <li><a href="http://www.inter.it/it/hp">国际米兰</a></li>
+                         <li><a href="http://www.xici.net/b858934/">南京国米十字军</a></li>
+                         <li><a href="http://www.inter1908.net">北京国米阵线</a></li>
                     </ul>
                 </li>
                 <li>

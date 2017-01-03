@@ -124,7 +124,7 @@ def change_email(token):
 
 
 @auth.route('/reset', methods=['GET', 'POST'])
-@login_required
+# @login_required
 def password_reset_request():
     if not current_user.is_anonymous:
         return redirect(url_for('main.index'))
@@ -170,3 +170,6 @@ def change_username():
         flash('Your password has been updated.')
         return redirect(url_for('main.index'))
     return render_template('auth/change_username.html', form=form)
+
+
+

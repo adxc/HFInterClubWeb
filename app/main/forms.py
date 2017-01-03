@@ -48,9 +48,12 @@ class PostForm(Form):
     submit = SubmitField('发表')
 
 
+
 # 发表评论
 class CommentForm(Form):
     body = StringField(' ', validators=[DataRequired()])
     submit = SubmitField('发表')
 
 
+# 管理员
+# class AdminForm(Form):

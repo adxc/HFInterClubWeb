@@ -48,7 +48,7 @@ class ChangeEmailForm(Form):
 
 
 class ResetPasswordForm(Form):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64),Email()])
+    email = StringField('邮箱', validators=[DataRequired(), Length(1, 64),Email()])
     new_password = PasswordField('新密码', validators=[DataRequired(), EqualTo('cfm_new_password', message='密码必须一致')])
     cfm_password = PasswordField('确认新密码', validators=[DataRequired])
     submit = SubmitField('确认')
@@ -59,8 +59,8 @@ class ResetPasswordForm(Form):
 
 
 class PasswordResetRequestForm(Form):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
-    submit = SubmitField('Reset Password')
+    email = StringField('邮箱', validators=[DataRequired(), Length(1, 64), Email()])
+    submit = SubmitField('重置密码')
 
 
 class ChangeUsernameForm(Form):

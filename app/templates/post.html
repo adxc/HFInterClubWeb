@@ -6,13 +6,15 @@
 {% block page_content %}
 {% include '_posts.html' %}
 {% include '_comments.html' %}
-<h4 id="comments" class="content hfstyle">发表评论</h4>
+<h4 id="comments" class="content hfstyle">评论</h4>
 {% if current_user.can(Permission.COMMENT) %}
 <div class=" content">
     {{wtf.quick_form(form) }}
 </div>
 {% endif %}
 {% if pagination %}
-
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.post', fragment='#comments', id=posts[0].id) }}
+</div>
 {% endif %}
 {% endblock %}

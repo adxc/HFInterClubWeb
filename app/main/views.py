@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, abort, flash, current_app,
 from . import main
 from .forms import EditProfileForm, EditProfileAdminForm, PostForm, CommentForm
 from .. import db
-from ..models import User, Role, Post, Permission, Comment
+from ..models import User, Role, Post, Permission, Comment, Hfmatch
 from flask_login import login_required, current_user
 from ..decorators import admin_required, permission_required
 
@@ -25,6 +25,7 @@ def news():
     pagination = Post.query.order_by(Post.timestamp.desc()).paginate(
         page, per_page=current_app.config['FLASKY_POSTS_PER_PAGE'], error_out=False)
     posts = pagination.items
+    print(posts)
     return render_template('/news.html', form=form, posts=posts, pagination=pagination)
 
 
@@ -164,5 +165,19 @@ def player():
 
 @main.route('/match')
 def match():
-    return render_template('match.html')
+    matches = Hfmatch.query.order_by(Hfmatch.date.asc()).all()
+    return render_template('match.html', matches=matches)
 
+
+@main.route('/match/<int:year>', methods=['GET', 'POST'])
+def match_year(year):
+    return redirect(url_for('.match_year', year=year))
+
+
+# 后台管理页面
+@main.route('/admin', methods=['GET', 'POST'])
+@login_required
+@admin_required
+def admin():
+
+    return render_template('admin.html')

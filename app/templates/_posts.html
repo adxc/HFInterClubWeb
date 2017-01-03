@@ -21,14 +21,14 @@
                {% endif %}
             </div>
             <div class="post-footer">
-                {% if current_user == post.author %}
-                <a href="{{ url_for('.edit', id=post.id) }}">
-                    <span class="label label-default">编辑</span>
-                </a>
-                {% endif %}
                 {% if current_user.is_administrator() %}
                 <a href="{{ url_for('.edit', id=post.id)}}">
                     <span class="label label-default">管理员</span>
+                </a>
+                {% endif %}
+                {% if current_user == post.author %}
+                <a href="{{ url_for('.edit', id=post.id) }}">
+                    <span class="label label-default">编辑</span>
                 </a>
                 {% endif %}
                 <a href="{{ url_for('.post', id=post.id) }}">

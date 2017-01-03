@@ -202,3 +202,14 @@ class Comment(db.Model):
                                                        strip=True))
 
 db.event.listen(Comment.body, 'set', Comment.on_change_body)
+
+
+class Hfmatch(db.Model):
+    __tablename__ = 'hfmatch'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=1)
+    date = db.Column(db.Date, nullable=False)
+    competitor = db.Column(db.String(45), nullable=False)
+    score = db.Column(db.String(45), nullable=False)
+    shooter = db.Column(db.String(45))
+    assist = db.Column(db.String(45))
+    excellent = db.Column(db.String(45))
