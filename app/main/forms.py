@@ -1,4 +1,4 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, BooleanField, SelectField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError
 from ..models import Role, User
@@ -6,7 +6,7 @@ from flask_pagedown.fields import PageDownField
 
 
 # 个人资料表格
-class EditProfileForm(Form):
+class EditProfileForm(FlaskForm):
     name = StringField('姓名', validators=[Length(0, 64)])
     location = StringField('地址', validators=[Length(0, 64)])
     about_me = TextAreaField('个人简介')
@@ -14,7 +14,7 @@ class EditProfileForm(Form):
 
 
 # 管理员个人资料表格
-class EditProfileAdminForm(Form):
+class EditProfileAdminForm(FlaskForm):
     email = StringField('邮箱', validators=[DataRequired(), Length(1, 64), Email()])
     username = StringField('用户名', validators=[DataRequired(), Length(1, 64), Regexp('^(?!_)(?!.*?_$)[a-zA-Z0-9_'
                                                                                     '\u4e00-\u9fa5]+$', 0,
@@ -43,17 +43,17 @@ class EditProfileAdminForm(Form):
 
 
 # 发表文章
-class PostForm(Form):
+class PostForm(FlaskForm):
     body = PageDownField('内容', validators=[DataRequired()])
     submit = SubmitField('发表')
 
 
 
 # 发表评论
-class CommentForm(Form):
+class CommentForm(FlaskForm):
     body = StringField(' ', validators=[DataRequired()])
     submit = SubmitField('发表')
 
 
 # 管理员
-# class AdminForm(Form):
+# class AdminForm(FlaskForm):

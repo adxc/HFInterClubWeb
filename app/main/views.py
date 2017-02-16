@@ -86,7 +86,7 @@ def edit_admin_profile(id):
     if form.validate_on_submit():
         user.email = form.email.data
         user.username = form.username.data
-        user.confirmed = form.confirmed.data
+        user.email_confirm = form.confirmed.data
         user.role = Role.query.get(form.role.data)
         user.name = form.name.data
         user.location = form.location.data
@@ -96,7 +96,7 @@ def edit_admin_profile(id):
         return redirect(url_for('.user', username=user.username))
     form.email.data = user.email
     form.username.data = user.username
-    form.confirmed.data = user.confirmed
+    form.confirmed.data = user.email_confirm
     form.role.data = user.role_id
     form.name.data = user.name
     form.location.data = user.location
@@ -179,5 +179,7 @@ def match_year(year):
 @login_required
 @admin_required
 def admin():
+    users = User.query.all()
 
-    return render_template('admin.html')
+    print(a)
+    return render_template('admin.html', users=users)

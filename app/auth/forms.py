@@ -1,18 +1,18 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, Regexp, EqualTo
 from wtforms import ValidationError
 from ..models import User
 
 
-class LoginForm(Form):
+class LoginForm(FlaskForm):
     email = StringField('邮箱', validators=[DataRequired(), Length(1, 64), Email()])
     password = PasswordField('密码', validators=[DataRequired()])
     remember_me = BooleanField('记住我')
     submit = SubmitField('登陆')
 
 
-class RegistrationForm(Form):
+class RegistrationForm(FlaskForm):
     username = StringField('用户名', validators=[DataRequired(), Length(1, 64), Regexp('^(?!_)(?!.*?_$)[a-zA-Z0-9_'
                                                                                     '\u4e00-\u9fa5]+$', 0,
                                                                                     message='非法用户名')])
@@ -30,14 +30,14 @@ class RegistrationForm(Form):
             raise ValidationError('用户名已经存在')
 
 
-class ChangePasswordForm(Form):
+class ChangePasswordForm(FlaskForm):
     old_password = StringField('旧密码', validators=[DataRequired()])
     new_password = PasswordField('新密码', validators=[DataRequired(), EqualTo('cfm_new_password', message='密码必须一致')])
     cfm_new_password = PasswordField('确认新密码', validators=[DataRequired()])
     submit = SubmitField('保存')
 
 
-class ChangeEmailForm(Form):
+class ChangeEmailForm(FlaskForm):
     password = PasswordField('密码', validators=[DataRequired()])
     new_email = StringField('邮箱', validators=[DataRequired(), Length(1, 64), Email()])
     submit = SubmitField('保存')
@@ -47,7 +47,7 @@ class ChangeEmailForm(Form):
             raise ValidationError('邮箱已经被注册')
 
 
-class ResetPasswordForm(Form):
+class ResetPasswordForm(FlaskForm):
     email = StringField('邮箱', validators=[DataRequired(), Length(1, 64),Email()])
     new_password = PasswordField('新密码', validators=[DataRequired(), EqualTo('cfm_new_password', message='密码必须一致')])
     cfm_password = PasswordField('确认新密码', validators=[DataRequired])
@@ -58,12 +58,12 @@ class ResetPasswordForm(Form):
             raise ValidationError('Unknown email address.')
 
 
-class PasswordResetRequestForm(Form):
+class PasswordResetRequestForm(FlaskForm):
     email = StringField('邮箱', validators=[DataRequired(), Length(1, 64), Email()])
     submit = SubmitField('重置密码')
 
 
-class ChangeUsernameForm(Form):
+class ChangeUsernameForm(FlaskForm):
     username = StringField('用户名', validators=[DataRequired(), Length(1, 64), Regexp('^(?!_)(?!.*?_$)[a-zA-Z0-9_'
                                                                                     '\u4e00-\u9fa5]+$', 0,
                                                                                     message='非法用户名')])

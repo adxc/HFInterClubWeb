@@ -1,1 +1,50 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="row hfmatch">
+     <div class="col-md-2 ">
+         <button style="width: 155px;">用户管理</button>
+         <button style="width: 155px;">文章管理</button>
+         <button style="width: 155px;">权限管理</button>
+     </div>
+    <div class="col-md-8 ">
+      <table class="table table table-hover " >
+          <caption><p>用户列表</p></caption>
+          <tr>
+              <td>ID</td>
+              <td>用户名</td>
+              <td>真实姓名</td>
+              <td>邮箱</td>
+              <td>创建时间</td>
+              <td>最后登录时间</td>
+              <td>删除</td>
+          </tr>
+          {% for user in users %}
+          <tr>
+              <td>{{ user.id }}</td>
+              <td>{{ user.username }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.create_time }}</td>
+              <td>{{ user.last_seen }}</td>
+              <td><input type="submit" value="X" style="color: red;"></td>
+          </tr>
+          {% endfor %}
+      </table>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script>
+    $(function () {
+        $("").click(function () {
+            $.get("admin",{
+
+                }
+
+            )
+        });
+    });
+</script>
+{% endblock %}
