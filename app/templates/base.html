@@ -121,7 +121,7 @@
                          </li>
 						 {% if current_user.is_administrator() %}
 						 <li>
-                             <a role="menuitem" tabindex="-1" href="{{ url_for('main.admin') }}">后台管理</a>
+                             <a role="menuitem" tabindex="-1" href="{{ url_for('admin.admin') }}">后台管理</a>
                          </li>
 						 {% endif %}
                          <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url_for('auth.logout') }}">退出</a>

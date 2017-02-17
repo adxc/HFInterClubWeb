@@ -6,7 +6,10 @@ from ..models import User
 
 
 class LoginForm(FlaskForm):
-    email = StringField('邮箱', validators=[DataRequired(), Length(1, 64), Email()])
+    # email = StringField('邮箱', validators=[DataRequired(), Length(1, 64), Email()])
+    username = StringField('用户名', validators=[DataRequired(), Length(1, 64), Regexp('^(?!_)(?!.*?_$)[a-zA-Z0-9_'
+                                                                                    '\u4e00-\u9fa5]+$', 0,
+                                                                                    message='非法用户名')])
     password = PasswordField('密码', validators=[DataRequired()])
     remember_me = BooleanField('记住我')
     submit = SubmitField('登陆')

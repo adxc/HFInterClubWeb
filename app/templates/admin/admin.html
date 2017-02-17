@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="row hfmatch">
+     <div class="col-md-2 ">
+         <a class="btn" href="{{url_for('.manager_user')}}">用户管理</a>
+         <a class="btn" href="{{url_for('.manager_article')}}">文章管理</a>
+         <a class="btn" href="{{url_for('.moderate')}}">评论管理</a>
+         <a class="btn" href="{{url_for('.manager_permission')}}">权限管理</a>
+     </div>
+    {% block page_content %}
+    {% endblock %}
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+{% endblock %}

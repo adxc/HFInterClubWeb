@@ -1,0 +1,47 @@
+{% extends "admin/admin.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}合肥国米{% endblock %}
+
+{% block page_content %}
+<div class="col-md-8 ">
+      <table class="table table table-hover " >
+          <caption><p>文章列表</p></caption>
+          <tr>
+              <td>用户名</td>
+              <td>文章标题</td>
+              <td>文章内容</td>
+              <td>文章创建时间</td>
+              <td>删除</td>
+          </tr>
+          {% for post in posts %}
+          <tr>
+              <td>{{ post.author.username }}</td>
+              <td class="post-body">{{ post.body }}</td>
+              <td class="post-body">{{ post.body  }}</td>
+              <td>{{ post.timestamp }}</td>
+              <td>
+                  <form method="post">
+                      <button name="post", value="{{ post.id }}" style="color: red">x</button>
+                  </form>
+              </td>
+          </tr>
+          {% endfor %}
+      </table>
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script>
+$(document).ready(function(){
+    //限制字符个数
+    $(".post-body").each(function(){
+        var maxwidth=20;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'...');
+        }
+    });
+});
+</script>
+{{ pagedown.include_pagedown() }}
+{% endblock %}

@@ -25,7 +25,6 @@ def news():
     pagination = Post.query.order_by(Post.timestamp.desc()).paginate(
         page, per_page=current_app.config['FLASKY_POSTS_PER_PAGE'], error_out=False)
     posts = pagination.items
-    print(posts)
     return render_template('/news.html', form=form, posts=posts, pagination=pagination)
 
 
@@ -121,37 +120,6 @@ def edit(id):
     return render_template('edit_post.html', form=form)
 
 
-# 分页路由器
-@main.route('/moderate')
-@login_required
-@permission_required(Permission.MODERATE_COMMENTS)
-def moderate():
-    page = request.args.get('page', 1, type=int)
-    pagination = Comment.query.order_by(Comment.timestamp.desc()).paginate(
-        page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'], error_out=False)
-    comments = pagination.items
-    return render_template('moderate.html', comments=comments, pagination=pagination, page=page)
-
-
-@main.route('/moderate/enable/<int:id>')
-@login_required
-@permission_required(Permission.MODERATE_COMMENTS)
-def moderate_enable(id):
-    comment = Comment.query.get_or_404(id)
-    comment.disabled = False
-    db.session.add(comment)
-    return redirect(url_for('.moderate', page=request.args.get('page', 1, type=int)))
-
-
-@main.route('/moderate/disable/<int:id>')
-@login_required
-@permission_required(Permission.MODERATE_COMMENTS)
-def moderate_disable(id):
-    comment = Comment.query.get_or_404(id)
-    comment.disabled = True
-    db.session.add(comment)
-    return redirect(url_for('.moderate', page=request.args.get('page', 1, type=int)))
-
 
 @main.route('/team')
 def team():
@@ -174,12 +142,4 @@ def match_year(year):
     return redirect(url_for('.match_year', year=year))
 
 
-# 后台管理页面
-@main.route('/admin', methods=['GET', 'POST'])
-@login_required
-@admin_required
-def admin():
-    users = User.query.all()
 
-    print(a)
-    return render_template('admin.html', users=users)

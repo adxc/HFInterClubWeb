@@ -42,6 +42,9 @@ def create_app(config_name):
     # url_prefix 指定路由前缀 /auth/login
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
 
+    from .admin import admin as admin_blueprint
+    app.register_blueprint(admin_blueprint, url_prefix='/admin')
+
     return app
 
 

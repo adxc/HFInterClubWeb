@@ -1,13 +1,8 @@
-{% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
-{% block content %}
-<div class="row hfmatch">
-     <div class="col-md-2 ">
-         <button style="width: 155px;">用户管理</button>
-         <button style="width: 155px;">文章管理</button>
-         <button style="width: 155px;">权限管理</button>
-     </div>
-    <div class="col-md-8 ">
+{% extends "admin/admin.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}合肥国米{% endblock %}
+{% block page_content %}
+<div class="col-md-8 ">
       <table class="table table table-hover " >
           <caption><p>用户列表</p></caption>
           <tr>
@@ -27,24 +22,18 @@
               <td>{{ user.email }}</td>
               <td>{{ user.create_time }}</td>
               <td>{{ user.last_seen }}</td>
-              <td><input type="submit" value="X" style="color: red;"></td>
+              <td>
+                  <form method="post">
+                      <button name="user", value="{{ user.id }}" style="color: red">x</button>
+                  </form>
+              </td>
           </tr>
           {% endfor %}
       </table>
-    </div>
 </div>
-{% endblock %}
-{% block scripts %}
-{{ super() }}
-<script>
-    $(function () {
-        $("").click(function () {
-            $.get("admin",{
-
-                }
-
-            )
-        });
-    });
-</script>
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.manager_user') }}
+</div>
+{% endif %}
 {% endblock %}
